@@ -1,49 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-        <meta charset="UTF-8">
-        <title>Weather Monitor</title>
-      <link rel="stylesheet" href="style.css">
-  </head>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부전동 실시간 날씨 모니터링</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="description" content="부산광역시 부산진구 부전동의 실시간 기상 상태를 모니터링합니다.">
+</head>
 <body>
-      <div id="app" class="weather-clear">
-                <div class="overlay"></div>div>
-                <main class="container">
-                              <header class="header">
-                                                <div class="location-info">
-                                                                      <h1 id="location-name">Bujeon-dong</h1>h1>
-                                                                      <p id="current-time">--</p>p>
-                                                </div>div>
-                                                <div class="status-badge" id="update-status">
-                                                                      <span class="status-dot"></span>span>
-                                                                      Monitoring
-                                                </div>div>
-                              </header>header>
-                              <section class="main-weather">
-                                                <div class="weather-card glass">
-                                                                      <div class="weather-main-info">
-                                                                                                <div class="weather-icon-container" id="weather-icon"></div>div>
-                                                                                                <div class="temp-container"><span id="current-temp" class="temp">--</span>span><span class="unit">C</span>span></div>div>
-                                                                                                <div class="weather-desc" id="weather-desc">Loading...</div>div>
-                                                                      </div>div>
-                                                                      <div class="weather-details-grid">
-                                                                                                <div class="detail-item"><span class="label">Rain</span>span><span id="rain-amount" class="value">--</span>span><span class="sub-unit">mm</span>span></div>div>
-                                                                                                <div class="detail-item"><span class="label">Prob</span>span><span id="pop-chance" class="value">--</span>span><span class="sub-unit">%</span>span></div>div>
-                                                                                                <div class="detail-item"><span class="label">Humidity</span>span><span id="humidity" class="value">--</span>span><span class="sub-unit">%</span>span></div>div>
-                                                                                                <div class="detail-item"><span class="label">Wind</span>span><span id="wind-speed" class="value">--</span>span><span class="sub-unit">m/s</span>span></div>div>
-                                                                                                <div class="detail-item"><span class="label">Dir</span>span><span id="wind-direction" class="value">--</span>span></div>div>
-                                                                      </div>div>
-                                                </div>div>
-                              </section>section>
-                              <section class="forecast-hint">
-                                                <p>Last Update: <span id="last-update-time">--:--</span>span></p>
-                                              <button id="refresh-btn" class="refresh-btn">Refresh</button>button>
-                              </section>section>
-                </main>main>
-              <footer class="footer"><p>&copy; 2026 Weather Monitor. Data provided by KMA.</p></footer>footer>
-      </div>div>
+    <div id="app" class="weather-clear">
+        <div class="overlay"></div>
+        <main class="container">
+            <header class="header">
+                <div class="location-info">
+                    <h1 id="location-name">부산광역시 부산진구 부전동</h1>
+                    <p id="current-time">--</p>
+                </div>
+                <div class="status-badge" id="update-status">
+                    <span class="status-dot"></span>
+                    실시간 모니터링 중
+                </div>
+            </header>
+            <section class="main-weather">
+                <div class="weather-card glass">
+                    <div class="weather-main-info">
+                        <div class="weather-icon-container" id="weather-icon"><div class="sun"></div></div>
+                        <div class="temp-container"><span id="current-temp" class="temp">--</span><span class="unit">°C</span></div>
+                        <div class="weather-desc" id="weather-desc">데이터를 불러오는 중...</div>
+                    </div>
+                    <div class="weather-details-grid">
+                        <div class="detail-item"><span class="label">강수량</span><span id="rain-amount" class="value">--</span><span class="sub-unit">mm</span></div>
+                        <div class="detail-item"><span class="label">강수확률</span><span id="pop-chance" class="value">--</span><span class="sub-unit">%</span></div>
+                        <div class="detail-item"><span class="label">습도</span><span id="humidity" class="value">--</span><span class="sub-unit">%</span></div>
+                        <div class="detail-item"><span class="label">풍속</span><span id="wind-speed" class="value">--</span><span class="sub-unit">m/s</span></div>
+                        <div class="detail-item"><span class="label">풍향</span><span id="wind-direction" class="value">--</span></div>
+                    </div>
+                </div>
+            </section>
+            <section class="forecast-hint">
+                <p>최근 업데이트: <span id="last-update-time">--:--</span></p>
+                <button id="refresh-btn" class="refresh-btn">새로고침</button>
+            </section>
+        </main>
+        <footer class="footer"><p>&copy; 2026 Weather Monitor. Data provided by KMA.</p></footer>
+    </div>
     <script src="app.js"></script>
 </body>
-</html>html></p></p>
-</body></title>
-  </head>
+</html>
